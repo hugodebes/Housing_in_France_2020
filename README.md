@@ -34,3 +34,10 @@ It was also a good way to see in which cities the french show interest with this
 
 To conclude, we learn a lot from this project whether it is about Python or the real estate market and how it was affected by the COVID-19.
 
+# Note
+
+To obtain the data, 
+Go to this URL : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
+
+The notebook is in French but do not hesitate to contact me if you want more details in English.
+
