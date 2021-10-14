@@ -1,43 +1,110 @@
-# Housing_in_France_2020
+
+
+# 🏘️ Housing in France 2020
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](http://forthebadge.com)
+
+
+
 Python project about sales related to buildings in France during 2020
 
 In this project, we tried to understand what were the tendencies regarding real estate in France for the year 2020. 
-We also compare it with the 2019 results.
+We will also compare it with 2019 datas.
 
-# Preprocessing
+<br/>
+## Installation
 
-The first part transforms the raw data into a valuable dataset easy to plot. We notably get rid of nan values, inconsistencies or redundancy using simple Python functions.
+To download the dataset, click on this [link](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/).
 
-# Analysis of the 2020 data
+For this project we will use the following libraries :
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import pyplot
+import matplotlib
+from collections import Counter
+import plotly.express as px
+import seaborn as sns
+import squarify
+import circlify
+import folium
+import json
+```
+Use the package manager [pip](https://pip.pypa.io/en/stable/) if you don't have them.
 
-We mainly use pyplot, pandas, seaborn, squarify, circlify to extract information out of our dataset.
-<img src=https://user-images.githubusercontent.com/51094403/136396994-eb50a99a-450d-4920-8d3c-6d8f59810472.png alt="drawing" width="400"/> <img src=https://user-images.githubusercontent.com/51094403/136397150-53fe9269-015d-4c42-a469-3f82499e027c.png alt="drawing" width="400"/>
 
-<img src=https://user-images.githubusercontent.com/51094403/136397256-adbb9ea0-fc29-41a9-bd87-821a7f4a7823.png alt="drawing" width="400"/> <img src=https://user-images.githubusercontent.com/51094403/136397320-d0fb930e-46d7-49f8-ab7e-1c84b37e5270.png alt="drawing" width="400"/>
+<br/>
+## Preprocessing
 
-One of our main achievements was to create interactive maps of France or the city of Paris to allow us to make our data understandable for everyone.
-We use the folium library.
+In the first part of the notebook, we will transform the raw data into a valuable dataset easier to plot and use for interpretations. We notably get rid of nan values, inconsistencies, or redundancy using simple Python functions. We only want to keep the interesting data we can use. We will also create new columns which we will take a look at after.
+<br/>
+## Analysis of the 2020 data
 
-<img src=https://user-images.githubusercontent.com/51094403/136397768-4bd91b39-f440-4dd3-85ad-abf6ae394507.png alt="drawing" width="400"/> <img src=https://user-images.githubusercontent.com/51094403/136397899-d664479b-4699-4512-b06b-77bbc0eee5fa.png alt="drawing" width="400"/>
+We mainly use pyplot, pandas, seaborn, squarify, circlify to make our interpretations out of our dataset.
 
-# Comparison between the 2020 and 2019 sales
+We will first have a global vision of our dataset by looking at the proportion of the transactions' types, where do the transactions take place, the mean value of the transactions depending on their types, or the kinds of lands that are bought.
+
+<br/>
+<br/>
+
+<p align="left"> 
+  <img src=https://user-images.githubusercontent.com/63778269/136857595-36804b4a-a07a-44b8-ad9d-f8e0ba44b1b2.PNG width=450/> 
+  <img src=https://user-images.githubusercontent.com/63778269/136857612-f73c88e5-b34d-4366-972c-f49ad5bef6cc.PNG width=350/>
+</p>
+
+
+Then we will focus on the difference between the departments in France. Take a look at the number, mean price, and m² price of each department and compare them to each other. For that we created interactive maps, using the folium library, of France to make our analysis easier to understand for everyone.
+
+<br/>
+<p align="left"> 
+  <img src=https://user-images.githubusercontent.com/63778269/136858120-fd168bf6-6602-461c-9a1c-53fb469d7304.PNG width=430/>
+  <img src=https://user-images.githubusercontent.com/63778269/136858138-6a81db9a-24f0-4a0a-b35c-4383fc926b8f.PNG width=375/>
+</p>
+<img src=https://user-images.githubusercontent.com/63778269/136858148-01faef81-aeac-4745-be45-8604f9b8f555.PNG width=/>
+<img src=https://user-images.githubusercontent.com/63778269/136858125-bae5a1ce-56a4-4a5e-ad70-1fea196b5b80.PNG width=350/>
+ <br/>
+To finish we will zoom on the departments and analyze the difference between the cities. We will pay attention to the most attractive ones and have a special look at Paris, the capital of France, because it is the largest city in France and the center of French economy, politics, traffic and culture.
+
+<br/>
+
+<p align="center"> 
+  <img src=https://user-images.githubusercontent.com/63778269/136859020-20a9096a-6ebf-4230-b40e-2d7c8cae7781.PNG width=400/>
+  <img src=https://user-images.githubusercontent.com/63778269/136859026-22d6fd29-c4c4-4160-af49-0c072810bedc.PNG width=400/>
+</p>
+<p align="center"> 
+  <img src = https://user-images.githubusercontent.com/63778269/136859027-6c60d176-3425-4585-b4fb-61dfc3a867f6.PNG width =600/>
+</p>
+<br/>
+
+
+## Comparison between the 2020 and 2019 sales
 
 To measure the impact of the sanitary crisis, we decided to compare the results between multiple years. 
 
-<img src=https://user-images.githubusercontent.com/51094403/136398691-61d55360-b03a-4a58-ba72-ca0e6635b4ef.png alt="drawing" width="350"/>
+<img src = https://user-images.githubusercontent.com/63778269/136859218-73229424-8153-40f5-8f44-a9f046f3a18a.PNG width=400/>
 
 It was also a good way to see in which cities the french show interest with this animation.
 
-<img src=https://user-images.githubusercontent.com/51094403/136402097-6ec676bd-9603-4e87-89ac-ac467630540f.gif alt="drawing" width="350"/>
+<img src = https://user-images.githubusercontent.com/63778269/136859244-3c0d9c83-307f-4e9b-8af1-1d18dd3a50c8.gif width=400/>
 
-# Conclusion
 
-To conclude, we learn a lot from this project whether it is about Python or the real estate market and how it was affected by the COVID-19.
+## Conclusion
 
-# Note
+To conclude, we learned a lot from this project whether it is about Python or the real estate market and how it was affected by the COVID-19.
 
-To obtain the data, 
-Go to this URL : https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/
+
+## Note
 
 The notebook is in French but do not hesitate to contact me if you want more details in English.
+
+### Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+# 🧍‍♂️ Authors
+
+* **Hugo Debes** _alias_ [@hugodebes](https://github.com/hugodebes)
+* **Aurelien Delicourt**
+* **Charles Delemazure** _alias_ [@Charlesdele](https://github.com/Charlesdele) 
+
 
