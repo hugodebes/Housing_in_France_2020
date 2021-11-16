@@ -11,8 +11,9 @@ Python project about sales related to buildings in France during 2020
 In this project, we tried to understand what were the tendencies regarding real estate in France for the year 2020. 
 We will also compare it with 2019 datas.
 
-<br/>
 ## Installation
+<br/>
+
 
 To download the dataset, click on this [link](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/).
 
@@ -33,9 +34,8 @@ import json
 ```
 Use the package manager [pip](https://pip.pypa.io/en/stable/) if you don't have them.
 
-
+##  Preprocessing
 <br/>
-## Preprocessing
 
 In the first part of the notebook, we will transform the raw data into a valuable dataset easier to plot and use for interpretations. We notably get rid of nan values, inconsistencies, or redundancy using simple Python functions. We only want to keep the interesting data we can use. We will also create new columns which we will take a look at after.
 <br/>
